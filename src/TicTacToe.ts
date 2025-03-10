@@ -36,6 +36,8 @@ export class TicTacToe {
 
   // This method checks if there is a winner
   public checkWinner() {
+
+    // Check the rows, columns, and diagonals for a winner
     if (this.checkRows() || this.checkCols() || this.checkDiagonals()) {
       this.winner = this.currentPlayer;
       this.printWinner();
@@ -53,6 +55,7 @@ export class TicTacToe {
     }
   }
 
+  // This method checks the columns for a winner
   checkCols() {
     const b = this.board;
 
@@ -63,6 +66,7 @@ export class TicTacToe {
     }
   }
 
+  // This method checks the diagonals for a winner
   checkDiagonals() {
     const b = this.board;
 
@@ -75,6 +79,7 @@ export class TicTacToe {
     }
   }
 
+  // This method prints the winner
   public printWinner() {
     console.log(`${this.winner} wins!`);
   }
